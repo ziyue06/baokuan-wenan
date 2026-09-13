@@ -1,0 +1,22 @@
+name = "baokuan-wenan"
+compatibility_date = "2026-09-01"
+pages_build_output_dir = "."
+
+[vars]
+WAFFO_BASE_URL = "https://api-sandbox.waffo.com"
+WAFFO_MERCHANT_ID = "replace-me"
+PRICE_CURRENCY = "HKD"
+PRICE_AMOUNT = "1.00"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "baokuan-wenan"
+database_id = "replace-me"
+
+[ai]
+binding = "AI"
+
+# Add these encrypted secrets in Cloudflare, never in this file:
+# WAFFO_API_KEY
+# WAFFO_PRIVATE_KEY
+# WAFFO_PUBLIC_KEY

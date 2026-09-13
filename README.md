@@ -1,15 +1,30 @@
-# 爆款商品文案机（Cloudflare Pages MVP）
+# 爆款商品文案机
 
-这是一个无需服务器的静态落地页。当前版本用表单生成订单文本并复制到剪贴板，收款码使用 `wechat-pay.jpg`，客服微信为 `Poison-kls`，计划绑定域名 `aikeji.xin`。
+Cloudflare Pages 全栈 MVP：Waffo Pancake 托管支付、D1 额度与历史记录、Workers AI 文案和封面图生成。
 
-## 上线前替换
+## 运行架构
 
-- 如需更换收款码，替换 `wechat-pay.jpg`
-- 如需更换客服微信，修改 `index.html` 中的 `Poison-kls`
-- 修改价格、交付时间和品牌名称
+- 静态前端：Cloudflare Pages
+- API：Pages Functions (`functions/api`)
+- 数据：Cloudflare D1
+- AI：Workers AI
+- 支付：Waffo Pancake（默认沙盒）
 
-## Cloudflare Pages 部署
+## Cloudflare 配置
 
-在 Cloudflare Pages 创建项目，选择“直接上传资源”，上传本目录的三个文件（`index.html`、`styles.css`、`script.js`）。不需要构建命令，输出目录留空或使用根目录。
+1. 用此仓库创建 Pages 项目，构建命令留空，输出目录为 `.`。
+2. 创建 D1 数据库并绑定为 `DB`，执行 `migrations/0001_initial.sql`。
+3. 绑定 Workers AI，变量名为 `AI`。
+4. 添加普通变量：`WAFFO_BASE_URL`、`WAFFO_MERCHANT_ID`、`PRICE_CURRENCY`、`PRICE_AMOUNT`。
+5. 添加加密 Secret：`WAFFO_API_KEY`、`WAFFO_PRIVATE_KEY`、`WAFFO_PUBLIC_KEY`。
+6. Waffo Webhook 地址使用 `https://aikeji.xin/api/webhook/waffo`。
 
-也可以连接 Git 仓库，构建命令留空，根目录使用仓库根目录。
+`wrangler.toml.example` 是配置模板，不包含真实密钥。
+
+## 安全规则
+
+- 浏览器只保存随机会话凭证，D1 只保存 SHA-256 哈希。
+- Webhook 在处理前使用 Waffo 公钥验签，并主动查询订单最终状态。
+- 每笔订单只发放一次额度；重复 Webhook 不会重复充值。
+- AI 失败自动退回额度。
+- Waffo 私钥和 API Key 只能放入 Cloudflare Secret。

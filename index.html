@@ -1,105 +1,115 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="小红书商品文案生成服务：输入商品卖点，获得3个标题、1篇种草正文、10个标签和1张封面图，适合电商商家与内容创作者。" />
-    <meta name="keywords" content="小红书文案生成器,商品文案生成器,AI商品文案,小红书种草文案,电商文案" />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
-    <link rel="canonical" href="https://aikeji.xin/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="zh_CN" />
-    <meta property="og:title" content="小红书商品文案生成器｜爆款商品文案机" />
-    <meta property="og:description" content="商品资料一键变成标题、种草正文、标签和封面图，首批内测29元。" />
-    <meta property="og:url" content="https://aikeji.xin/" />
-    <meta property="og:image" content="https://aikeji.xin/wechat-pay.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>小红书商品文案生成器｜AI商品文案与种草内容</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="seo.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "爆款商品文案机",
-        "url": "https://aikeji.xin/",
-        "description": "面向电商商家和内容创作者的小红书商品文案生成服务。",
-        "areaServed": "CN",
-        "serviceType": "小红书商品文案生成",
-        "offers": { "@type": "Offer", "price": "29", "priceCurrency": "CNY", "description": "10次体验" }
-      }
-    </script>
-  </head>
-  <body>
-    <header class="nav shell">
-      <a class="brand" href="#top"><span class="brand-mark">✦</span>爆款商品文案机</a>
-      <a class="nav-link" href="#order">领取内测名额 <span>→</span></a>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="爆款商品文案机：付款后自动获得额度，一键生成小红书商品标题、正文、标签和封面图。">
+  <meta name="keywords" content="小红书文案生成器,商品文案生成器,AI商品文案,种草文案">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://aikeji.xin/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="爆款商品文案机 | AI 商品文案与封面图">
+  <meta property="og:description" content="付款后自动到账，一键生成标题、种草正文、标签和封面图。">
+  <meta property="og:url" content="https://aikeji.xin/">
+  <title>爆款商品文案机 | AI 商品文案与封面图</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="seo.css">
+</head>
+<body>
+  <header class="nav shell">
+    <a class="brand" href="#top"><span class="brand-mark">文</span>爆款商品文案机</a>
+    <nav class="nav-actions" aria-label="主导航">
+      <button class="text-button" id="open-recovery" type="button">恢复账户</button>
+      <a class="button button-small button-primary" href="#studio">开始使用</a>
+    </nav>
+  </header>
 
-    <main id="top">
-      <section class="hero shell">
-        <div class="hero-copy">
-          <p class="eyebrow">首批内测 · 仅开放 10 个名额</p>
-          <h1>把一个商品，<br /><em>变成一篇能发布的内容。</em></h1>
-          <p class="hero-text">你提供商品资料，我们交付 3 个标题、1 篇小红书正文、10 个标签和 1 张封面图。明早直接拿去发。</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#order">29 元领取 10 次体验</a>
-            <a class="button button-ghost" href="#examples">先看生成效果</a>
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">AI 商品内容工作台</p>
+        <h1>商品资料填一次，<br><em>发布内容自动生成。</em></h1>
+        <p class="hero-text">3 个标题、1 篇小红书正文、10 个标签和 1 张封面图。支付成功后额度自动到账，不用发截图，不用等客服。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#studio">购买 10 次额度</a>
+          <a class="button button-ghost" href="#examples">查看示例</a>
+        </div>
+        <div class="trust-row"><span>支付自动到账</span><span>结果自动保存</span><span>失败不扣额度</span></div>
+      </div>
+      <div class="hero-preview" aria-label="生成结果示例">
+        <div class="preview-top"><span>生成结果</span><span class="status-dot">已完成</span></div>
+        <div class="cover-demo"><span>通勤人的<br>随身榨汁杯</span></div>
+        <div class="preview-content">
+          <span class="kicker">标题 01</span>
+          <h2>早八人的果汁自由，被这只杯子承包了</h2>
+          <p>不用带整套厨房出门。300ml 刚刚好，USB 充电，喝完拆开就能洗。</p>
+          <div class="tags"><span>#通勤好物</span><span>#榨汁杯</span><span>#早八人</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-band"><div class="shell proof-row"><div><strong>10</strong><span>次生成额度</span></div><div><strong>4</strong><span>类内容一次交付</span></div><div><strong>24/7</strong><span>付款后自动使用</span></div></div></section>
+
+    <section id="studio" class="studio-band">
+      <div class="shell studio-layout">
+        <div class="studio-intro">
+          <p class="eyebrow">生成工作台</p>
+          <h2>从付款到出稿，<br>都在这里完成</h2>
+          <p>先购买额度。付款成功返回后，本页会自动检查到账状态。以后可用账户码在任意设备恢复额度和历史结果。</p>
+          <div class="balance-box">
+            <span>可用额度</span>
+            <strong id="credit-count">0</strong>
+            <small id="account-state">尚未连接账户</small>
           </div>
-          <div class="trust-row"><span>✓ 不用学习提示词</span><span>✓ 中文场景优化</span><span>✓ 人工检查后交付</span></div>
         </div>
-        <div class="hero-card" aria-label="生成结果预览">
-          <div class="window-bar"><span></span><span></span><span></span><small>生成预览</small></div>
-          <div class="preview-image"><span>今日好物</span></div>
-          <div class="preview-body">
-            <p class="preview-label">标题 01</p>
-            <p class="preview-title">熬夜党真的需要这杯「晚安茶」</p>
-            <p class="preview-copy">不是所有的夜晚都要靠硬撑。精选原料，清爽不苦，睡前一杯，把今天的疲惫放下。</p>
-            <div class="tags"><span>#睡前仪式感</span><span>#打工人好物</span><span>#今日好物</span></div>
+
+        <div class="studio-panel">
+          <div class="panel-tabs" role="tablist" aria-label="工作台步骤">
+            <button class="panel-tab active" type="button" data-tab="buy">1. 购买额度</button>
+            <button class="panel-tab" type="button" data-tab="create">2. 生成内容</button>
+            <button class="panel-tab" type="button" data-tab="history">3. 历史结果</button>
           </div>
+
+          <section class="tab-pane active" data-pane="buy">
+            <div class="purchase-head"><div><span class="pill">测试模式</span><h3>10 次生成额度</h3><p>支付页由 Waffo Pancake 托管，支付结果由服务器验证。</p></div><div class="price"><strong id="display-price">HK$1</strong><span>测试价</span></div></div>
+            <form id="checkout-form" class="stack-form">
+              <label>接收凭证的邮箱<input type="email" name="email" required autocomplete="email" placeholder="name@example.com"></label>
+              <label class="check-row"><input type="checkbox" required><span>我已了解当前为沙盒联调，正式价格上线前另行公布</span></label>
+              <button class="button button-primary full" type="submit"><span class="button-label">前往安全支付</span><span class="spinner" hidden></span></button>
+              <p class="form-note" id="checkout-note">付款完成后会自动返回并发放额度。</p>
+            </form>
+            <div class="access-code" id="access-code-box" hidden><span>你的账户码</span><strong id="access-code"></strong><button class="icon-button" id="copy-code" type="button" title="复制账户码" aria-label="复制账户码">⧉</button><p>请保存账户码。清除浏览器数据后，可用它找回额度和历史结果。</p></div>
+          </section>
+
+          <section class="tab-pane" data-pane="create">
+            <form id="generate-form" class="stack-form">
+              <div class="field-grid"><label>商品名称<input name="product" required maxlength="80" placeholder="例如：便携榨汁杯"></label><label>目标人群<input name="audience" required maxlength="120" placeholder="例如：上班族、健身人群"></label></div>
+              <label>核心卖点<textarea name="sellingPoints" required maxlength="800" placeholder="尺寸、材质、功能、使用场景、与同类产品的差异"></textarea></label>
+              <div class="field-grid"><label>内容语气<select name="tone"><option value="真实体验">真实体验</option><option value="专业测评">专业测评</option><option value="轻松活泼">轻松活泼</option><option value="简洁高级">简洁高级</option></select></label><label>促销信息<input name="promotion" maxlength="100" placeholder="选填，例如：第二件半价"></label></div>
+              <button class="button button-primary full" type="submit"><span class="button-label">生成整套内容</span><span class="spinner" hidden></span></button>
+              <p class="form-note" id="generate-note">每次生成消耗 1 次额度；生成失败自动退回。</p>
+            </form>
+          </section>
+
+          <section class="tab-pane" data-pane="history">
+            <div id="history-list" class="history-list"><p class="empty-state">连接账户后，这里会显示最近的生成结果。</p></div>
+          </section>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="stats shell"><div><strong>10</strong><span>个首批名额</span></div><div><strong>4</strong><span>项交付内容</span></div><div><strong>24h</strong><span>内完成首单</span></div></section>
+    <section id="examples" class="section shell">
+      <div class="section-heading"><p class="eyebrow">每次生成包含</p><h2>不是灵感提示，是可以继续修改发布的初稿</h2></div>
+      <div class="deliverables"><article><span>01</span><h3>3 个标题</h3><p>覆盖痛点、场景和结果导向，方便测试点击率。</p></article><article><span>02</span><h3>1 篇正文</h3><p>按移动端阅读节奏组织，开头抓人，卖点清楚。</p></article><article><span>03</span><h3>10 个标签</h3><p>组合品类词、场景词和目标人群词。</p></article><article><span>04</span><h3>1 张封面图</h3><p>根据商品与主题自动生成竖版首图。</p></article></div>
+    </section>
 
-      <section id="examples" class="section shell">
-        <div class="section-heading"><p class="eyebrow">你会拿到什么</p><h2>一次提交，四份能用的内容</h2></div>
-        <div class="deliverables">
-          <article><div class="number">01</div><h3>3 个标题</h3><p>覆盖种草、痛点和场景，不再对着空白文档发呆。</p></article>
-          <article><div class="number">02</div><h3>1 篇正文</h3><p>按小红书阅读节奏组织，开头抓人、卖点清楚、结尾有行动。</p></article>
-          <article><div class="number">03</div><h3>10 个标签</h3><p>根据商品和目标人群匹配搜索词，复制即可使用。</p></article>
-          <article><div class="number">04</div><h3>1 张封面图</h3><p>给你一张适合首图的视觉方向，降低发布门槛。</p></article>
-        </div>
-      </section>
+    <section class="section shell faq-section"><div class="section-heading"><p class="eyebrow">常见问题</p><h2>付款和生成说明</h2></div><div class="faq-list"><details><summary>付款后多久能用？</summary><p>服务器收到并验证支付成功通知后自动发放，一般在几秒内完成。页面会自动刷新状态。</p></details><details><summary>生成失败会扣次数吗？</summary><p>不会。AI 服务异常时，本次消耗的额度会自动退回账户。</p></details><details><summary>换设备还能找回吗？</summary><p>可以。购买时生成的账户码可以恢复剩余额度和历史结果，请妥善保存。</p></details></div></section>
+  </main>
 
-      <section class="example-band"><div class="shell example-inner"><div><p class="eyebrow">真实示例</p><h2>“一款便携榨汁杯”<br />可以这样写</h2></div><blockquote>“早八通勤带不了一整套厨房？这只榨汁杯，放进包里就走。早餐、下午茶、健身后，一杯搞定。”<cite>— 生成结果节选</cite></blockquote></div></section>
-
-      <section id="order" class="section shell order-section">
-        <div class="section-heading"><p class="eyebrow">领取内测</p><h2>留下商品资料，明早收到第一版</h2><p class="subheading">付款后填写，资料越具体，结果越贴近你的商品。</p></div>
-        <div class="order-grid">
-          <form id="order-form" class="order-form">
-            <label>商品名称<input name="product" required placeholder="例如：便携榨汁杯" /></label>
-            <label>商品卖点<textarea name="sellingPoint" required placeholder="例如：400ml、可拆洗、USB 充电，适合通勤"></textarea></label>
-            <label>目标人群<input name="audience" required placeholder="例如：上班族、健身人群" /></label>
-            <label>你的联系方式<input name="contact" required placeholder="微信号 / 手机号"></label>
-            <button class="button button-primary" type="submit">生成我的订单信息 <span>→</span></button>
-            <p id="form-note" class="form-note">提交后会自动复制订单信息，请粘贴发给客服。</p>
-          </form>
-          <aside class="pay-card"><p class="pay-title">先付款，锁定名额</p><div class="qr-placeholder"><img src="wechat-pay.jpg" alt="微信收款码" /></div><p class="price"><strong>¥29</strong> / 10 次体验</p><p class="pay-note">付款后，把复制的订单信息和付款截图发给客服。首单预计 24 小时内交付。</p><p class="contact-link">客服微信：Poison-kls</p></aside>
-        </div>
-      </section>
-      <section class="section shell faq-section" aria-labelledby="faq-title">
-        <div class="section-heading"><p class="eyebrow">常见问题</p><h2 id="faq-title">关于商品文案生成</h2></div>
-        <div class="faq-list">
-          <details><summary>这是什么服务？</summary><p>这是一项面向电商商家和内容创作者的小红书商品文案生成服务。你提交商品名称、卖点和目标人群，我们提供标题、正文、标签和封面图。</p></details>
-          <details><summary>适合哪些商品？</summary><p>适合美妆护肤、食品饮料、服装家居、数码配件等需要种草内容的商品。资料越具体，生成内容越贴近真实卖点。</p></details>
-          <details><summary>多久可以收到内容？</summary><p>首批内测订单预计24小时内交付。内容会经过人工检查，减少表达生硬和卖点遗漏。</p></details>
-          <details><summary>生成后可以直接发布吗？</summary><p>可以作为发布初稿使用。建议结合真实使用体验、商品合规要求和平台规则进行最终确认。</p></details>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer"><div class="shell"><span>爆款商品文案机 · aikeji.xin</span><span>把好产品，说给对的人听。</span></div></footer>
-    <script src="script.js"></script>
-  </body>
+  <dialog id="recovery-dialog"><form method="dialog" class="dialog-card"><button class="dialog-close" value="cancel" aria-label="关闭">×</button><h2>恢复账户</h2><p>输入购买时保存的账户码。</p><label>账户码<input id="recovery-code" autocomplete="off" placeholder="例如：ABCD-EFGH-IJKL"></label><button id="recover-account" class="button button-primary full" value="default" type="button">恢复</button><p id="recovery-note" class="form-note"></p></form></dialog>
+  <footer class="footer"><div class="shell"><span>爆款商品文案机 · aikeji.xin</span><span>客服微信：Poison-kls</span></div></footer>
+  <script src="script.js"></script>
+</body>
 </html>
