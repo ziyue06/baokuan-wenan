@@ -15,6 +15,7 @@
   <meta property="og:url" content="https://aikeji.xin/">
   <title>爆款商品文案机 | AI 商品文案与封面图</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="support.css">
   <link rel="stylesheet" href="seo.css">
 </head>
 <body>
@@ -73,13 +74,8 @@
           </div>
 
           <section class="tab-pane active" data-pane="buy">
-            <div class="purchase-head"><div><span class="pill">测试模式</span><h3>10 次生成额度</h3><p>支付页由 Waffo Pancake 托管，支付结果由服务器验证。</p></div><div class="price"><strong id="display-price">HK$1</strong><span>测试价</span></div></div>
-            <form id="checkout-form" class="stack-form">
-              <label>接收凭证的邮箱<input type="email" name="email" required autocomplete="email" placeholder="name@example.com"></label>
-              <label class="check-row"><input type="checkbox" required><span>我已了解当前为沙盒联调，正式价格上线前另行公布</span></label>
-              <button class="button button-primary full" type="submit"><span class="button-label">前往安全支付</span><span class="spinner" hidden></span></button>
-              <p class="form-note" id="checkout-note">付款完成后会自动返回并发放额度。</p>
-            </form>
+            <div class="purchase-head"><div><span class="pill">免费使用</span><h3>现在就开始生成</h3><p>无需注册、无需付款。内容生成完全免费，结果会自动保存在本设备。</p></div><div class="price"><strong>免费</strong><span>永久免费开放</span></div></div>
+            <div class="support-box"><p>如果这个工具帮到了你，欢迎通过爱赞助发电支持作者，想给的给钱，完全自愿，不影响免费使用。</p><img src="wechat-pay.jpg" alt="支持作者的收款码"><p class="form-note" id="checkout-note">免费账户正在准备中，马上可以开始生成。</p></div>
             <div class="access-code" id="access-code-box" hidden><span>你的账户码</span><strong id="access-code"></strong><button class="icon-button" id="copy-code" type="button" title="复制账户码" aria-label="复制账户码">⧉</button><p>请保存账户码。清除浏览器数据后，可用它找回额度和历史结果。</p></div>
           </section>
 
@@ -89,7 +85,7 @@
               <label>核心卖点<textarea name="sellingPoints" required maxlength="800" placeholder="尺寸、材质、功能、使用场景、与同类产品的差异"></textarea></label>
               <div class="field-grid"><label>内容语气<select name="tone"><option value="真实体验">真实体验</option><option value="专业测评">专业测评</option><option value="轻松活泼">轻松活泼</option><option value="简洁高级">简洁高级</option></select></label><label>促销信息<input name="promotion" maxlength="100" placeholder="选填，例如：第二件半价"></label></div>
               <button class="button button-primary full" type="submit"><span class="button-label">生成整套内容</span><span class="spinner" hidden></span></button>
-              <p class="form-note" id="generate-note">每次生成消耗 1 次额度；生成失败自动退回。</p>
+              <p class="form-note" id="generate-note">免费生成，失败会自动重试，不会产生费用。</p>
             </form>
           </section>
 

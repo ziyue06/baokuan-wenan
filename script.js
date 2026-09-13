@@ -82,7 +82,8 @@ async function refreshAccount() {
 
 document.querySelectorAll('.panel-tab').forEach((tab) => tab.addEventListener('click', () => selectTab(tab.dataset.tab)));
 
-$('#checkout-form').addEventListener('submit', async (event) => {
+const checkoutForm = $('#checkout-form');
+checkoutForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   setBusy(form, true);
@@ -142,4 +143,17 @@ if (paymentReturn && state.token) {
   state.pollTimer = setInterval(refreshAccount, 3000);
   setTimeout(() => { if (state.pollTimer) { clearInterval(state.pollTimer); state.pollTimer = null; setNote('#checkout-note', '支付结果仍在确认中。稍后刷新页面即可，不会丢单。'); } }, 120000);
 }
-refreshAccount();
+async function ensureFreeAccount() {
+  if (state.token) return refreshAccount();
+  try {
+    const data = await api('/api/free-account', { method: 'POST' });
+    state.token = data.sessionToken;
+    localStorage.setItem('aikeji_session', state.token);
+    renderAccount(data.account);
+    selectTab('create');
+    setNote('#checkout-note', '免费账户已准备好，可以开始生成。', 'success');
+  } catch (error) {
+    setNote('#checkout-note', error.message, 'error');
+  }
+}
+ensureFreeAccount();
