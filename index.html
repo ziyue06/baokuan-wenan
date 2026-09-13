@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="把商品资料变成能直接发布的小红书内容。标题、正文、标签和封面图一次生成。" />
+    <title>爆款商品文案机｜明早拿到可发布内容</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav shell">
+      <a class="brand" href="#top"><span class="brand-mark">✦</span>爆款商品文案机</a>
+      <a class="nav-link" href="#order">领取内测名额 <span>→</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="eyebrow">首批内测 · 仅开放 10 个名额</p>
+          <h1>把一个商品，<br /><em>变成一篇能发布的内容。</em></h1>
+          <p class="hero-text">你提供商品资料，我们交付 3 个标题、1 篇小红书正文、10 个标签和 1 张封面图。明早直接拿去发。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#order">29 元领取 10 次体验</a>
+            <a class="button button-ghost" href="#examples">先看生成效果</a>
+          </div>
+          <div class="trust-row"><span>✓ 不用学习提示词</span><span>✓ 中文场景优化</span><span>✓ 人工检查后交付</span></div>
+        </div>
+        <div class="hero-card" aria-label="生成结果预览">
+          <div class="window-bar"><span></span><span></span><span></span><small>生成预览</small></div>
+          <div class="preview-image"><span>今日好物</span></div>
+          <div class="preview-body">
+            <p class="preview-label">标题 01</p>
+            <p class="preview-title">熬夜党真的需要这杯「晚安茶」</p>
+            <p class="preview-copy">不是所有的夜晚都要靠硬撑。精选原料，清爽不苦，睡前一杯，把今天的疲惫放下。</p>
+            <div class="tags"><span>#睡前仪式感</span><span>#打工人好物</span><span>#今日好物</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats shell"><div><strong>10</strong><span>个首批名额</span></div><div><strong>4</strong><span>项交付内容</span></div><div><strong>24h</strong><span>内完成首单</span></div></section>
+
+      <section id="examples" class="section shell">
+        <div class="section-heading"><p class="eyebrow">你会拿到什么</p><h2>一次提交，四份能用的内容</h2></div>
+        <div class="deliverables">
+          <article><div class="number">01</div><h3>3 个标题</h3><p>覆盖种草、痛点和场景，不再对着空白文档发呆。</p></article>
+          <article><div class="number">02</div><h3>1 篇正文</h3><p>按小红书阅读节奏组织，开头抓人、卖点清楚、结尾有行动。</p></article>
+          <article><div class="number">03</div><h3>10 个标签</h3><p>根据商品和目标人群匹配搜索词，复制即可使用。</p></article>
+          <article><div class="number">04</div><h3>1 张封面图</h3><p>给你一张适合首图的视觉方向，降低发布门槛。</p></article>
+        </div>
+      </section>
+
+      <section class="example-band"><div class="shell example-inner"><div><p class="eyebrow">真实示例</p><h2>“一款便携榨汁杯”<br />可以这样写</h2></div><blockquote>“早八通勤带不了一整套厨房？这只榨汁杯，放进包里就走。早餐、下午茶、健身后，一杯搞定。”<cite>— 生成结果节选</cite></blockquote></div></section>
+
+      <section id="order" class="section shell order-section">
+        <div class="section-heading"><p class="eyebrow">领取内测</p><h2>留下商品资料，明早收到第一版</h2><p class="subheading">付款后填写，资料越具体，结果越贴近你的商品。</p></div>
+        <div class="order-grid">
+          <form id="order-form" class="order-form">
+            <label>商品名称<input name="product" required placeholder="例如：便携榨汁杯" /></label>
+            <label>商品卖点<textarea name="sellingPoint" required placeholder="例如：400ml、可拆洗、USB 充电，适合通勤"></textarea></label>
+            <label>目标人群<input name="audience" required placeholder="例如：上班族、健身人群" /></label>
+            <label>你的联系方式<input name="contact" required placeholder="微信号 / 手机号"></label>
+            <button class="button button-primary" type="submit">生成我的订单信息 <span>→</span></button>
+            <p id="form-note" class="form-note">提交后会自动复制订单信息，请粘贴发给客服。</p>
+          </form>
+          <aside class="pay-card"><p class="pay-title">先付款，锁定名额</p><div class="qr-placeholder"><img src="wechat-pay.jpg" alt="微信收款码" /></div><p class="price"><strong>¥29</strong> / 10 次体验</p><p class="pay-note">付款后，把复制的订单信息和付款截图发给客服。首单预计 24 小时内交付。</p><p class="contact-link">客服微信：Poison-kls</p></aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="shell"><span>爆款商品文案机 · aikeji.xin</span><span>把好产品，说给对的人听。</span></div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
